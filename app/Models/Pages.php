@@ -15,7 +15,7 @@ class Pages extends Model
     protected $table = 'pages';
 
     public function scopeGetPages($query){
-        return $query->select(['id','slug','title'])->get();
+        return $query->get();
     }
     public function scopeGetPage($query,$slug){
         return $query->where('slug',$slug)->get();
